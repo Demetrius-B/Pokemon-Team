@@ -92,30 +92,50 @@ footer {
   display: flex;
   width: 100%; }
 
-.App {
-  text-align: center;
-}
+header {
+  background-color: blue;
+  height: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  header h1 {
+    color: white;
+    padding-left: .5rem; }
+  header a {
+    color: white;
+    font-size: 1.6rem;
+    padding-right: .5rem; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+.main {
+  background-color: blue;
+  border-top: solid white .1rem; }
+  .main .pokemonTeam {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+    border: solid 1px white;
+    width: 25%;
+    height: auto;
+    padding: .5rem;
+    background-color: white;
+    border-radius: .5rem; }
+    .main .pokemonTeam .pokemonTeamHeader {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      border-bottom: solid .1rem black; }
+    .main .pokemonTeam p, .main .pokemonTeam a {
+      color: black; }
+    .main .pokemonTeam ul {
+      padding-top: .5rem; }
+      .main .pokemonTeam ul li {
+        color: black; }
