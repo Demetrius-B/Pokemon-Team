@@ -114,7 +114,8 @@ header {
 
 .main {
   background-color: blue;
-  border-top: solid white .1rem; }
+  border-top: solid white .1rem;
+  height: 100vh; }
   .main .pokemonTeam {
     margin-top: 1rem;
     margin-left: 1rem;
@@ -139,3 +140,31 @@ header {
       padding-top: .5rem; }
       .main .pokemonTeam ul li {
         color: black; }
+
+.addTeamForm {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .addTeamForm h1 {
+    width: 100%;
+    padding-left: 2rem;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem; }
+  .addTeamForm input {
+    font-size: 2.5rem;
+    border: 1px solid white; }
+  .addTeamForm .searchButton {
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border: 1px solid white; }
