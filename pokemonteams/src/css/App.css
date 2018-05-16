@@ -116,30 +116,57 @@ header {
   background-color: blue;
   border-top: solid white .1rem;
   height: 100vh; }
-  .main .pokemonTeam {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    padding-bottom: 1rem;
-    border: solid 1px white;
-    width: 25%;
-    height: auto;
-    padding: .5rem;
-    background-color: white;
-    border-radius: .5rem; }
-    .main .pokemonTeam .pokemonTeamHeader {
+  .main .teamList .teams {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .main .teamList .teams .pokemonTeam {
+      width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      border-bottom: solid .1rem black; }
-    .main .pokemonTeam p, .main .pokemonTeam a {
-      color: black; }
-    .main .pokemonTeam ul {
-      padding-top: .5rem; }
-      .main .pokemonTeam ul li {
-        color: black; }
+      padding-left: 1rem;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .main .teamList .teams .pokemonTeam .pokemonTeamList {
+        background-color: yellow;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: 2rem;
+        width: 25%;
+        margin-bottom: 2rem; }
+        .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          border-bottom: solid .1rem black;
+          width: 100%;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          height: 3rem; }
+          .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader p, .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader a {
+            color: black;
+            font-size: 1.8rem; }
+          .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader .crudControls {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between; }
+            .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader .crudControls a:first-child {
+              padding-right: .5rem; }
+        .main .teamList .teams .pokemonTeam .pokemonTeamList ul {
+          padding-top: .5rem; }
+          .main .teamList .teams .pokemonTeam .pokemonTeamList ul li {
+            color: black; }
 
 .addTeamForm {
   padding-bottom: 4rem;

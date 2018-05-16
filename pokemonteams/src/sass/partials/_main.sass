@@ -3,25 +3,44 @@
     border-top: solid white .1rem
     height: 100vh
 
-    .pokemonTeam
-        margin-top: 1rem
-        margin-left: 1rem
-        padding-bottom: 1rem
-        border: solid 1px white
-        width: 25%
-        height: auto
-        padding: .5rem
-        background-color: white
-        border-radius: .5rem
-
-        .pokemonTeamHeader
+    .teamList
+        .teams
             display: flex
-            justify-content: space-between
-            border-bottom: solid .1rem black
+            
+            .pokemonTeam
+                width: 100%
+                display: flex
+                padding-left: 1rem
+                flex-wrap: wrap
+                .pokemonTeamList
+                    background-color: yellow
+                    display: flex
+                    margin-right: 2rem
+                    width: 25%
+                    margin-bottom: 2rem
 
-        p, a
-            color: black
-        ul 
-            padding-top: .5rem
-            li
-                color: black
+                    .pokemonTeamHeader
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        border-bottom: solid .1rem black
+                        width: 100%
+                        padding-left: 1rem
+                        padding-right: 1rem
+                        height: 3rem
+
+                        p, a
+                            color: black
+                            font-size: 1.8rem
+
+                        .crudControls
+                            display: flex
+                            justify-content: space-between
+
+                            a
+                                &:first-child
+                                    padding-right: .5rem
+                    ul 
+                        padding-top: .5rem
+                        li
+                            color: black

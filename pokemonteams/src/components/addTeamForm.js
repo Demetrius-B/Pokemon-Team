@@ -30,7 +30,9 @@ class addTeamForm extends Component {
         event.preventDefault()
 
         const team = {
-            name: this.state.teamName
+            id: 'team' + Date.now(),
+            name: this.state.teamName,
+            pokemon: {}
         }
 
         this.props.addTeam(team)
@@ -51,17 +53,3 @@ class addTeamForm extends Component {
 }
 
 export default addTeamForm;
-
-
-{/* <div className="main"> */}
-{/* className='"pokemonTeam" + team name' */}
-{/* <div className="pokemonTeam">
-<div className="pokemonTeamHeader">
-    <p>Team Name</p>
-    <a>Edit</a>
-</div>
-<ul className="pokemonList">
-    <li>Mew2</li>
-</ul>
-</div>
-</div> */}
