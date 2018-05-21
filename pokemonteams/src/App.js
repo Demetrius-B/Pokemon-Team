@@ -30,11 +30,9 @@ class App extends Component {
     // Need to know which team we're adding the pokemon to.
     //Cheating....
     if(this.state.teams && this.state.teams.length){
-      this.state.teams[0].pokemon.push(pokemon);
+      this.state.teams[0].pokemon.push(pokemon); // sets team pokemon is added too
       this.setState({'teams':this.state.teams})
     } 
-
-    console.log("adding pokemon to team:::::::", this.state.teams)
   }
 
 

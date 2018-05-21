@@ -157,6 +157,8 @@ header {
           .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader p, .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader a {
             color: black;
             font-size: 1.8rem; }
+          .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader p {
+            font-weight: bold; }
           .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader .crudControls {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -173,7 +175,9 @@ header {
           -webkit-box-pack: space-evenly;
           -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-          padding: .5rem; }
+          padding: .5rem;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
           .main .teamList .teams .pokemonTeam .pokemonTeamList ul .pokemon {
             color: black;
             display: -webkit-box;
@@ -182,13 +186,13 @@ header {
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
-            padding-right: 1rem;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
             flex-direction: column;
             width: 29%;
-            border: 1px solid darkorchid; }
+            border: 1px solid darkorchid;
+            margin-bottom: 2rem; }
             .main .teamList .teams .pokemonTeam .pokemonTeamList ul .pokemon p {
               font-size: 2rem; }
             .main .teamList .teams .pokemonTeam .pokemonTeamList ul .pokemon .pokemonData {
@@ -199,7 +203,8 @@ header {
               -webkit-box-direction: normal;
               -ms-flex-direction: column;
               flex-direction: column;
-              text-align: center; }
+              text-align: center;
+              padding-bottom: .5rem; }
               .main .teamList .teams .pokemonTeam .pokemonTeamList ul .pokemon .pokemonData h1 {
                 font-size: 1.8rem; }
               .main .teamList .teams .pokemonTeam .pokemonTeamList ul .pokemon .pokemonData p {
@@ -233,3 +238,15 @@ header {
     height: 5rem;
     background-color: white;
     border: 1px solid white; }
+
+.main .teamList .addPokemonForm {
+  padding-left: 1rem; }
+  .main .teamList .addPokemonForm .teamFullError {
+    background-color: yellow;
+    padding: 1rem; }
+    .main .teamList .addPokemonForm .teamFullError p:first-child {
+      font-size: 2rem;
+      font-weight: bold;
+      padding-bottom: 1rem; }
+    .main .teamList .addPokemonForm .teamFullError p p {
+      font-size: 1.8rem; }

@@ -7,13 +7,12 @@ import AddTeamForm from './addTeamForm'
 import Team from './team'
 import SearchPokemonButton from '@material-ui/icons/Search'
 
-
-
 class pokemonTeam extends Component {
     constructor(props) { 
         super(props)       
         this.state = {
-            pokemonName: ''
+            pokemonName: '',
+            pokemon_types: []
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -41,22 +40,22 @@ class pokemonTeam extends Component {
           .then(response => response.json())
           .then(responseAsJson => {
             data = responseAsJson;
-            this.setState({pokeData: data})
-            console.log("State Set:: COMPLETE::")
-            this.setState({pokemon_name: data.name, pokemon_img: data.sprites.front_default, pokemon_type: data.types[0].type.name})
+            this.setState({pokemon_name: data.name, pokemon_img: data.sprites.front_default, types: data.types})
 
-            // creating pokemon object to send up
-            const pokemon = {
+            const types = []
+            for (let i = 0; i < this.state.types.length; i++) {  // getting all types
+                types.push(this.state.types[i].type.name) 
+            }
+            this.setState({pokemon_types: types}) // sets all types
+
+            const pokemon = {  // creating pokemon object to send up
                 id: data.id,
                 name: data.name,
                 img: data.sprites.front_default,
-                type: data.types[0].type.name
+                types: this.state.pokemon_types
             }
 
-            // return(pokemon)
-
-            // sending the pokemon object up so it can be added to the main state
-            this.props.addPokemon(pokemon)
+            this.props.addPokemon(pokemon)  // sending the pokemon object up so it can be added to the main state
           })
 
         event.preventDefault()
@@ -80,11 +79,40 @@ class pokemonTeam extends Component {
     }
 
     addPokemon = () => {
-        return(
-            <form className="addPokemonForm" onSubmit={this.createPokemon}>
-                <input type="text" name="pokemon" value={this.state.pokemonName} onChange={this.handleChange} placeholder="Pokemon Name" />
-                <button type="submit" className="searchPokemonButton"><SearchPokemonButton /></button>
-            </form>
+        if (this.props.teams[0].pokemon.length == 6) {
+            return(
+                this.teamFull()
+            )
+        } else {
+            return(
+                <form className="addPokemonForm" onSubmit={this.checkTeamSize}>
+                    <input type="text" name="pokemon" value={this.state.pokemonName} onChange={this.handleChange} placeholder="Pokemon Name" />
+                    <button type="submit" className="searchPokemonButton"><SearchPokemonButton /></button>
+                </form>
+            )
+        }
+    }
+
+    checkTeamSize = (event) => {
+        console.log("CHECKING TEAM SIZE:::::")
+        console.log("TEAM SIZE:::::::", this.props.teams[0].pokemon.length)
+
+        if (this.props.teams[0].pokemon.length < 6) {
+            this.createPokemon(event) // If team size is under 6 then add pokemon
+        } else {
+            this.teamFull() // error out if team is full
+        }
+
+        event.preventDefault();
+    }
+
+    teamFull = () => {
+        console.log("TEAM IS FULL")
+        return (
+            <div className="teamFullError">
+                <p className="teamFull">Sorry this team is full!</p>
+                <p>Please remove a pokemon from this team or create a new one!</p>
+            </div>
         )
     }
 
