@@ -32,7 +32,7 @@ class addTeamForm extends Component {
         const team = {
             id: 'team' + Date.now(),
             name: this.state.teamName,
-            pokemon: {}
+            pokemon: []
         }
 
         this.props.addTeam(team)

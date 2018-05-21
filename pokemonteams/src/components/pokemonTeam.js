@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 
 // Custom Import
@@ -28,8 +28,8 @@ class pokemonTeam extends Component {
     createPokemon = (event) => {
         let data = []
     
-        let baseUrl = `https://pokeapi.co/api/v2/pokemon/${this.state.pokemonName}`
-    
+        let baseUrl = `https://pokeapi.co/api/v2/pokemon/${this.state.pokemonName.toLowerCase()}` // add toLowerCase so user cannot make a case error
+        console.log("Base URL:",baseUrl);
         const options = {
         mode: 'cors',
         headers:{
@@ -42,14 +42,15 @@ class pokemonTeam extends Component {
           .then(responseAsJson => {
             data = responseAsJson;
             this.setState({pokeData: data})
-            console.log("State Set:: COMPLETE::", data)
-            this.setState({pokemon_name: data.name, pokemon_img: data.sprites.front_default})
+            console.log("State Set:: COMPLETE::")
+            this.setState({pokemon_name: data.name, pokemon_img: data.sprites.front_default, pokemon_type: data.types[0].type.name})
 
             // creating pokemon object to send up
             const pokemon = {
                 id: data.id,
                 name: data.name,
-                img: data.sprites.front_default
+                img: data.sprites.front_default,
+                type: data.types[0].type.name
             }
 
             // return(pokemon)
@@ -67,7 +68,6 @@ class pokemonTeam extends Component {
             {   
                 Object.keys(this.props.teams).map(function (key) {
                     console.log(this.props.teams[key].name)
-                    let team;
                 return(
                     <div className="pokemonTeamList" id={key}>
                         <h1>{this.props.teams[key].name}</h1>

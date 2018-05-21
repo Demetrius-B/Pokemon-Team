@@ -18,13 +18,13 @@
                     margin-right: 2rem
                     width: 25%
                     margin-bottom: 2rem
+                    flex-direction: column
 
                     .pokemonTeamHeader
                         display: flex
                         justify-content: space-between
                         align-items: center
                         border-bottom: solid .1rem black
-                        width: 100%
                         padding-left: 1rem
                         padding-right: 1rem
                         height: 3rem
@@ -41,6 +41,29 @@
                                 &:first-child
                                     padding-right: .5rem
                     ul 
-                        padding-top: .5rem
-                        li
+                        display: flex
+                        justify-content: space-evenly
+                        padding: .5rem
+
+                        .pokemon
                             color: black
+                            display: flex
+                            align-items: center
+                            padding-right: 1rem
+                            flex-direction: column
+                            width: 29%;
+                            border: 1px solid darkorchid;
+
+                            p 
+                                font-size: 2rem
+
+                            .pokemonData
+                                display: flex
+                                flex-direction: column
+                                text-align: center
+
+                                h1 
+                                    font-size: 1.8rem
+                                p 
+                                    font-size: 1.5rem
+                                    padding-top: .5rem
