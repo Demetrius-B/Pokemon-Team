@@ -8,7 +8,8 @@ import PokemonTeam from './components/pokemonTeam'
 
 class App extends Component {
   state = {
-    teams: []
+    teams: [],
+    maxTeams: 3
   }
 
 
@@ -16,7 +17,7 @@ class App extends Component {
     console.log("adding a team!")
 
     const teams = [...this.state.teams]
-    // teams[`team${Date.now()}`] = team
+    teams[`team${Date.now()}`] = team
     teams.push(team);
     this.setState({teams})
 
@@ -48,7 +49,7 @@ class App extends Component {
           </header>
         
           <div className="main">
-            <PokemonTeam addPokemon={this.addPokemon} addTeam={this.addTeam} teams={this.state.teams} />
+            <PokemonTeam addPokemon={this.addPokemon} addTeam={this.addTeam} teams={this.state.teams} maxTeams={this.state.maxTeams}/>
           </div>
         </div>
       </BrowserRouter>

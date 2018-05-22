@@ -240,7 +240,8 @@ header {
     border: 1px solid white; }
 
 .main .teamList .addPokemonForm {
-  padding-left: 1rem; }
+  padding-left: 1rem;
+  width: 49%; }
   .main .teamList .addPokemonForm .teamFullError {
     background-color: yellow;
     padding: 1rem; }
@@ -249,4 +250,9 @@ header {
       font-weight: bold;
       padding-bottom: 1rem; }
     .main .teamList .addPokemonForm .teamFullError p p {
-      font-size: 1.8rem; }
+      font-size: 1.9rem; }
+  .main .teamList .addPokemonForm .addPokemonForm {
+    background-color: yellow;
+    padding: 1rem; }
+    .main .teamList .addPokemonForm .addPokemonForm input {
+      font-size: 2.5rem; }
