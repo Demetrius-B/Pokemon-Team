@@ -5,6 +5,7 @@ import { Link, Route } from 'react-router-dom'
 // Custom import
 import DeleteButton from '@material-ui/icons/Delete'
 import SearchPokemonButton from '@material-ui/icons/Search'
+import AddPokemonForm from './addPokemonForm';
 
 
 class team extends Component {
@@ -124,21 +125,9 @@ class team extends Component {
         )
     }
 
-
-    checkTeamSize = (event) => {
-        console.log("CHECKING TEAM SIZE:::::")
-
-        for (let i = 0; i < this.props.teams.length; i++) {
-            console.log("TEAM SIZE:::::::", this.props.teams[i].pokemon.length)            
-        }
-
-        if (this.props.teams[0].pokemon.length < 6) {
-            this.createPokemon(event) // If team size is under 6 then add pokemon
-        } else {
-            this.teamFull() // error out if team is full
-        }
-
-        event.preventDefault();
+    showAddPokemonForm = () => {
+        console.log("showing form")
+        return ( <AddPokemonForm teams={this.props.teams} maxTeams={this.props.maxTeams} addPokemon={this.props.addPokemon} /> )
     }
 
     render(){
@@ -151,15 +140,11 @@ class team extends Component {
                         <div className="pokemonTeamHeader">
                             <p className="teamName">Team:{this.props.teams[key].name}</p>
                             <div className="crudControls">
-                                <Link to="/addPokemon">Add</Link>
+                                <a onClick={this.showAddPokemonForm}>Add</a>
                             </div>
                         </div>
 
                         {/* Add Pokemon to target team */}
-                        <div className="addPokemonForm">
-                            <p>Adding to team </p>
-                            <Route path="/addPokemon" component={this.addPokemon} />
-                        </div>
 
                         <ul className="pokemonList">
                             {

@@ -17,7 +17,7 @@ class App extends Component {
     console.log("adding a team!")
 
     const teams = [...this.state.teams]
-    teams[`team${Date.now()}`] = team
+    // teams[`team${Date.now()}`] = team
     teams.push(team);
     this.setState({teams})
 
@@ -32,7 +32,7 @@ class App extends Component {
     //Cheating....
     if(this.state.teams && this.state.teams.length){
       this.state.teams[0].pokemon.push(pokemon); // sets team pokemon is added too
-      this.setState({'teams':this.state.teams})
+      this.setState({teams:this.state.teams})
     } 
   }
 
