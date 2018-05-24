@@ -3,7 +3,7 @@ import TeamDetails from './TeamDetails';
 
 class TeamStats extends Component {
   renderTeams = () => {
-    if (this.props.teams.length == 0) {
+    if (this.props.teams.length === 0) {
       return null
     } else if (this.props.teams.length > 0) {
       return this.props.teams.map((team, index) => {

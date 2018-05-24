@@ -8,7 +8,7 @@ import NotFound from './NotFound'
 
 const Router = () => {
         return(
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Switch>
                     <Route exact path="/" component={Picker} />
                     <Route path="/pokemonTeam/:userId" component={App} />
