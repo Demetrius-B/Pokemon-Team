@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 62.5%; }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Holtwood One SC', serif;
+  background-color: white;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%; }
+
+div#root {
+  width: 100%; }
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+
+header {
+  background-color: blue;
+  height: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  header h1 {
+    color: white;
+    padding-left: .5rem; }
+  header a {
+    color: white;
+    font-size: 1.6rem;
+    padding-right: .5rem; }
+
+.main {
+  background-color: blue;
+  border-top: solid white .1rem;
+  height: 100vh; }
+  .main .teamList .teams {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .main .teamList .teams .pokemonTeam {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding-left: 1rem;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .main .teamList .teams .pokemonTeam .pokemonTeamList {
+        background-color: yellow;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: 2rem;
+        width: 25%;
+        margin-bottom: 2rem;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          border-bottom: solid .1rem black;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          height: 3rem; }
+          .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader p, .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader a {
+            color: black;
+            font-size: 1.8rem; }
+          .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader p {
+            font-weight: bold; }
+          .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader .crudControls {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between; }
+            .main .teamList .teams .pokemonTeam .pokemonTeamList .pokemonTeamHeader .crudControls a:first-child {
+              padding-right: .5rem; }
+        .main .teamList .teams .pokemonTeam .pokemonTeamList ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+          padding: .5rem;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          .main .teamList .teams .pokemonTeam .pokemonTeamList ul .pokemon {
+            color: black;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            width: 29%;
+            border: 1px solid darkorchid;
+            margin-bottom: 2rem; }
+            .main .teamList .teams .pokemonTeam .pokemonTeamList ul .pokemon p {
+              font-size: 2rem; }
+            .main .teamList .teams .pokemonTeam .pokemonTeamList ul .pokemon .pokemonData {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              text-align: center;
+              padding-bottom: .5rem; }
+              .main .teamList .teams .pokemonTeam .pokemonTeamList ul .pokemon .pokemonData h1 {
+                font-size: 1.8rem; }
+              .main .teamList .teams .pokemonTeam .pokemonTeamList ul .pokemon .pokemonData p {
+                font-size: 1.5rem;
+                padding-top: .5rem; }
+
+.addTeamForm {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .addTeamForm h1 {
+    width: 100%;
+    padding-left: 2rem;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem; }
+  .addTeamForm input {
+    font-size: 2.5rem;
+    border: 1px solid white; }
+  .addTeamForm .searchButton {
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border: 1px solid white; }
+
+.main .teamList .addPokemonForm {
+  padding-left: 1rem;
+  width: 49%; }
+  .main .teamList .addPokemonForm .teamFullError {
+    background-color: yellow;
+    padding: 1rem; }
+    .main .teamList .addPokemonForm .teamFullError p:first-child {
+      font-size: 2rem;
+      font-weight: bold;
+      padding-bottom: 1rem; }
+    .main .teamList .addPokemonForm .teamFullError p p {
+      font-size: 1.9rem; }
+  .main .teamList .addPokemonForm .addPokemonForm {
+    background-color: yellow;
+    padding: 1rem; }
+    .main .teamList .addPokemonForm .addPokemonForm input {
+      font-size: 2.5rem; }
