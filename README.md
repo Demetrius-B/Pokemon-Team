@@ -3,9 +3,6 @@
 **Author Email**: dberkeley97@gmail.com
 **Author Slack Username**: @dberkeley
 
-# Project Name:
-PokemonTeams
-
 # Project Description:
 This application will allow you to add any Pokemon to a team so you can show off this team to all your friends.
 
