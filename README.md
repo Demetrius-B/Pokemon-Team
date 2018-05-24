@@ -10,7 +10,7 @@ PokemonTeams
 This application will allow you to add any Pokemon to a team so you can show off this team to all your friends.
 
 # Project Live Demo:
-Please switch to the gh-pages branch then you can find the live site [here](https://Demetrius-B.github.io/Pokemon-Teams/)
+Please switch to the gh-pages branch then you can find the live site [here](https://Demetrius-B.github.io/Pokemon-Team/)
 
 # How to get this project running on your local machine:
 Download or clone the repo to your local machine. cd into 'pokemonteams' then run 'npm install' to install all the dependences.
