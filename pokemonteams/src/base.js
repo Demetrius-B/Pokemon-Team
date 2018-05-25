@@ -8,11 +8,8 @@ const firebaseApp = firebase.initializeApp({
     databaseURL: "https://pokemonteams-20db3.firebaseio.com"
 })
 
-
 const base = Rebase.createClass(firebaseApp.database())
 
 export { firebaseApp };
 
 export default base
-
-  

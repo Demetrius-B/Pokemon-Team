@@ -13,7 +13,8 @@ class TeamDetails extends Component {
     error: false,
     showEdit: false,
     searchError: false,
-    teamFull: false
+    teamFull: false,
+    loadingPokemon: false
   };
 
 showPokemonForm = () => {
@@ -29,7 +30,7 @@ showDeleteForm = () => {
 createPokemon = e => {
   e.preventDefault();
 
-  this.setState({searchError: false})
+  this.setState({searchError: false, loadingPokemon: true})
 
   let data = []
   
@@ -63,6 +64,7 @@ createPokemon = e => {
         }
 
         this.props.addPokemon(this.props.index, pokemon);
+        this.setState({loadingPokemon: false})
       } else if (data.detail === "Not found.") {
         this.setState({searchError: true})
       }
@@ -86,6 +88,7 @@ renderPokemonForm = () => {
         </form>
         <div className="notFoundError">
           {this.notFoundError()}
+          {this.loadingPokemon()}
         </div>
       </React.Fragment>
     );
@@ -167,6 +170,16 @@ teamFull = () => {
       <div className="teamFullError">
           <p>Sorry this team is full!</p>
           <p>Please remove a pokemon from this team or create a new one!</p>
+      </div>
+    )
+  }
+}
+
+loadingPokemon = () => {
+  if (this.state.loadingPokemon) {
+    return (
+      <div className="teamFullError">
+          <p>Loading Pokemon...</p>
       </div>
     )
   }
